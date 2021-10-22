@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\JobController;
+use App\Http\Controllers\VacationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +24,11 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::prefix('department')->middleware(['auth:sanctum','verified'])->resource('department', DepartmentController::class);
+
+Route::prefix('job')->middleware(['auth:sanctum','verified'])->resource('job', JobController::class);
+
+Route::prefix('employee')->middleware(['auth:sanctum','verified'])->resource('employee', EmployeeController::class);
+
+Route::prefix('vacation')->middleware(['auth:sanctum','verified'])->resource('vacation', VacationController::class);
