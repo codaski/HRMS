@@ -5293,6 +5293,24 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
+var mobMenu = document.getElementById("mob-menu");
+var cross = document.getElementById("open");
+var hamburgur = document.getElementById("close");
+var flag0 = false;
+
+var mobMenu1 = function mobMenu1() {
+  if (!flag0) {
+    mobMenu.classList.remove("hidden");
+    cross.classList.add("hidden");
+    hamburgur.classList.remove("hidden");
+    flag0 = true;
+  } else {
+    mobMenu.classList.add("hidden");
+    cross.classList.remove("hidden");
+    hamburgur.classList.add("hidden");
+    flag0 = false;
+  }
+};
 
 /***/ }),
 
