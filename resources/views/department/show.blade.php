@@ -1,4 +1,4 @@
-<x-master-layout>
+<x-master>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ $department->name }}
@@ -47,4 +47,4 @@
             </div>
         </div>
     </div>
-</x-master-layout>
+</x-master>
